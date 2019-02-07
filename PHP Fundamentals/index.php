@@ -71,42 +71,37 @@
                 $upperMessagelower = strtolower($cleverWelcomeMessage);
                 $pupCount = rand(50,100);
             ?>
-            <h1><?php echo strtoupper($cleverWelcomeMessage); ?></h1>
+            <h1><?php echo $upperMessage ?></h1>
             <p>Over <?php echo $pupCount; ?> pet friends!</p>
 
             <p><a class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
         </div>
     </div>
 
+    <?php
+        $pet1="Chew Barka";
+        $pet2 = "Spark Pug";
+        $pet3 = "Pico de Gato";
+
+        $pets = array($pet1,$pet2,$pet3);       
+        
+        var_dump($pets);
+    ?>
+
     <div class="container">
         <div class="row">
-            <div class="col-lg-4">
-                <h2>Heading</h2>
-
-                <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris
-                    condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis
-                    euismod. Donec sed odio dui. </p>
-
-                <p><a class="btn btn-default" href="#">View details &raquo;</a></p>
-            </div>
-            <div class="col-lg-4">
-                <h2>Heading</h2>
-
-                <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris
-                    condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis
-                    euismod. Donec sed odio dui. </p>
-
-                <p><a class="btn btn-default" href="#">View details &raquo;</a></p>
-            </div>
-            <div class="col-lg-4">
-                <h2>Heading</h2>
-
-                <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula
-                    porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut
-                    fermentum massa justo sit amet risus.</p>
-
-                <p><a class="btn btn-default" href="#">View details &raquo;</a></p>
-            </div>
+        <?php 
+            foreach($pets as $pet){
+                echo '<div class="col-lg-4">';
+                echo '<h2>';
+                echo $pet;
+                echo '</h2>';
+                echo '<p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris
+                condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis
+                euismod. Donec sed odio dui. </p>';
+                echo '</div>';
+            }
+        ?>
         </div>
 
         <hr>
