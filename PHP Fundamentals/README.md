@@ -1,7 +1,5 @@
 # PHP
 
-# PHP
-
 # 07/02/2019
 ## Fundamentos em PHP
 ### Loop
