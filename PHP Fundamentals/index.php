@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -82,15 +83,36 @@
         $pet1="Chew Barka";
         $pet2 = "Spark Pug";
         $pet3 = "Pico de Gato";
+    
+        $pancake = array(
+           'name' => 'Pancake',
+            'age' => '1 year',
+            'weight' => 9,
+            'bio' =>'Treats and Snoozin!',
+            'filename' => 'pancake.png');
 
-        $pets = array($pet1,$pet2,$pet3);       
-        
-        //var_dump($pets);
+        $pets = array($pet1,$pet2,$pet3);      
+        $pets =  ['Kitty Gala']
+                
     ?>
 
     <div class="container">
         <div class="row">
-        <?php 
+        <div class="col-lg-4 pet-list-item">
+            <h2> <?php echo $pancake['nome']; ?> </h2>
+            <img src="/images/<?php echo $pancake['filename'];?>" class="img-rounded" />
+
+            <blockquote class="pet-details">
+                <?php  echo $pancake['age'];?>
+                <?php  echo $pancake['weight'];?> lbs
+            </blockquote>
+        <p>
+        <?php echo $pancake['bio']; ?>
+        </p>
+
+        </div>
+
+            <?php 
             foreach($pets as $pet){
                 echo '<div class="col-lg-4">';
                 echo '<h2>';
@@ -115,4 +137,5 @@
     <script src="js/jquery.js"></script>
     <script src="js/bootstrap.min.js"></script>
 </body>
+
 </html>
